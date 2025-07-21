@@ -1,0 +1,13 @@
+Object Type,Object Name,Corresponding Steps,Predecessor,Successor,Input Data,Input Data Assesment,Output Data,Output Data Assesment,Additional Information
+Start Event,Start SOP_004 Process,,N/A,Receive Tollgate Dates,N/A,,N/A,,
+Receive Task,Receive Tollgate Dates,1_1.3,Start SOP_004 Process,Record Tollgate Dates in Case Management Tool,"Tollgate 1,2,3 Dates",TP,TollgateDatesRecord,TP,
+Task,Record Tollgate Dates in Case Management Tool,1_1.3,Receive Tollgate Dates,Consultation Approaching,TollgateDatesRecord,TP,RecordedTollgateDates,TP,
+Intermediate Event,Consultation Approaching,1_5.0,Record Tollgate Dates in Case Management Tool,Configure Access Rights for Experts,N/A,,N/A,,Timer event one week before consultation
+Task,Configure Access Rights for Experts,1_5.2,Consultation Approaching,Receive Final AR Link for Check,RecordedTollgateDates,TP,AccessRightsConfigured,TP,
+Receive Task,Receive Final AR Link for Check,1_5.0,Configure Access Rights for Experts,Submit AR for Plagiarism and Language Edit,Final AR Link,TP,ARDocument,TP,
+Task,Submit AR for Plagiarism and Language Edit,1_5.0,Receive Final AR Link for Check,Receive AR Approval Link,ARDocument,TP,CheckedARDocument,TP,Ensure clarity and readability
+Receive Task,Receive AR Approval Link,1_5.0,Submit AR for Plagiarism and Language Edit,Record Approval and Set Tollgate 3 Date,ApprovalLink,TP,ARApprovalLink,TP,
+Task,Record Approval and Set Tollgate 3 Date,1_6.2,Receive AR Approval Link,Sanitize AR and Prepare for Publication,ARApprovalLink,TP,Tollgate3DateSet,TP,
+Task,Sanitize AR and Prepare for Publication,1_6.4,Record Approval and Set Tollgate 3 Date,Publish AR on EFSA and ECDC Websites,ApprovedARDocument,TP,SanitizedARReady,TP,Implement confidentiality decisions
+Task,Publish AR on EFSA and ECDC Websites,1_6.0,Sanitize AR and Prepare for Publication,End SOP_004 Process,SanitizedARReady,TP,PublishedAR,TP,For EUOHZ & EUSR AMR also publish on ECDC website
+End Event,End SOP_004 Process,,Publish AR on EFSA and ECDC Websites,N/A,N/A,,N/A,,

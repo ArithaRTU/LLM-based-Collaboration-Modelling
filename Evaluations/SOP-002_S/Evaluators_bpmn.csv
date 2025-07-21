@@ -1,0 +1,8 @@
+Object Type,Object Name,Corresponding Steps,Predecessor,Successor,Input Data,Input Data Assesment,Output Data,Output Data Assesment,Additional Information
+Start Event,Start Condition,,N/A,Receive Appointment and Evaluation Guide,N/A,,N/A,,
+Receive Task,Receive Appointment,1_2.1,Start Condition,Sign Declaration of Interest,N/A,,Appointment Notification; Evaluation Guide Document,TP;TP,
+Task,Sign Declaration of Interest,1_2.2,Receive Appointment and Evaluation Guide,Receive Evaluation Instructions,Declaration of Interest Form,TP,Signed Declaration of Interest,TP,Confidentiality and absence of conflicts
+Receive Task,Receive Evaluation Instructions,1_2.3,Sign Declaration of Interest,Assess Applications,Evaluation Guide; Assessment Methodology,TP;TP,Evaluation Instructions Received,TP,
+Task,Assess Applications,1_2.4,Receive Evaluation Instructions,Send Assessment Results,Applications; Evaluation Guide,TP;TP,Candidate Assessment Scores,TP,Assess applications per cut-off scores
+Send Task,Send Assessment Results,1_2.4,Assess Applications,End Condition,Candidate Assessment Scores,TP,Assessment Report,TP,Send to EMC Chair
+End Event,End Condition,,Send Assessment Results,N/A,N/A,,N/A,,

@@ -1,0 +1,6 @@
+Object Type,Object Name,Corresponding Steps,Predecessor,Successor,Input Data,Input Data Assesment,Output Data,Output Data Assesment,Additional Information
+Start Event,Start Nomination Process,,N/A,Receive Nomination Request,N/A,,N/A,,
+Receive Task,Receive Nomination Request,1_1.5,Start Nomination Process,Evaluate and Nominate Experts,Request for experts nominations,TP,Acknowledged Request,TP,
+Task,Evaluate and Nominate Experts,1_1.5,Receive Nomination Request,Send Nomination to EFSA,Request for experts nominations,TP,Nomination List,TP,Must comply with EFSA nomination guidelines and deadlines
+Send Task,Send Nomination to EFSA,1_1.5,Evaluate and Nominate Experts,End Nomination Process,Nomination List,TP,Submitted Nomination List,TP,Sent via official channel to RAL
+End Event,End Nomination Process,,Send Nomination to EFSA,N/A,N/A,,N/A,,

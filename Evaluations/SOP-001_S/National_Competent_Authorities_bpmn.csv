@@ -1,0 +1,21 @@
+Object Type,Corresponding Steps,Object Name,Predecessor,Successor,Input Data,Input Data Evaluation,Output Data,Output Data Evaluation,Additional Information
+Start Event,1_2.0;2_3.8,GPSA and RPSA process start,N/A,Process selection,N/A,,N/A,,
+Gateway (Parallel),1_2.0,Process selection,GPSA and RPSA process start,Receive GPSA request AND Receive RPSA studies list,,,,,
+Receive Task,1_2.0,Receive GPSA request,Process selection,Receive decision on GPSA request,GPSA request,TP,GPSA request received confirmation,TP,
+Receive Task,1_2.0,Receive decision on GPSA request,Receive GPSA request,Is GPSA request accepted?,Decision notification,TP,Accepted/Rejected notification,TP,
+Gateway (Exclusive),1_2.0,Is GPSA request accepted?,Receive decision on GPSA request,Receive GPSA advice mode (if accepted) OR GPSA process aborted (if rejected),,-,,-,
+End Event,1_2.0,GPSA process aborted,Is GPSA request accepted? (rejected),N/A,N/A,-,N/A,-,Rejected request
+Receive Task,1_2.0,Receive GPSA advice mode,Is GPSA request accepted? (accepted),Advice mode selection,Advice mode notification,TP,Mode received,TP,
+Gateway (Exclusive),1_2.0,Advice mode selection,Receive GPSA advice mode,Collaborate on written GPSA advice and summary OR Attend GPSA advice meeting,,,,,
+Task,1_2.0,Collaborate on written GPSA advice and summary,Advice mode selection (written),GPSA advice contribution provided,GPSA request; Advice mode notification,TP;TP,Draft GPSA advice; Draft summary,TP;TP,In cooperation with EFSA
+Task,1_2.0,Attend GPSA advice meeting,Advice mode selection (meeting),Contribute to GPSA summary,GPSA request; Advice mode notification,TP;TP,Meeting attendance,FP,Both EFSA and NCAs attend
+Task,1_2.0,Contribute to GPSA summary,Attend GPSA advice meeting,GPSA advice contribution provided,Meeting minutes; NCA interventions,TP;TP,Summary contributions,TP,Summary reflects both opinions if disagreement
+End Event,1_2.0,GPSA advice contribution provided,Collaborate on written GPSA advice and summary AND Contribute to GPSA summary,N/A,N/A,,N/A,,
+Receive Task,2_3.8,Receive RPSA studies list,Process selection,Receive public consultation comments,Intended studies list,TP,Studies list received,TP,
+Receive Task,2_3.8,Receive public consultation comments,Receive RPSA studies list,Receive RPSA advice mode,Third party comments,TP,Comments received,TP,
+Receive Task,2_3.8,Receive RPSA advice mode,Receive public consultation comments,RPSA advice mode selection,Advice mode notification,TP,Mode received,TP,
+Gateway (Exclusive),2_3.8,RPSA advice mode selection,Receive RPSA advice mode,Collaborate on written RPSA advice and summary OR Attend RPSA advice meeting,,,,,
+Task,2_3.8,Collaborate on written RPSA advice and summary,RPSA advice mode selection (written),RPSA advice contribution provided,Studies list; Third party comments; Advice mode notification,TP;TP;TP,Draft RPSA advice; Draft summary,TP;TP,In cooperation with EFSA
+Task,2_3.8,Attend RPSA advice meeting,RPSA advice mode selection (meeting),Contribute to RPSA summary,Studies list; Third party comments; Advice mode notification,TP;TP;TP,Meeting attendance,FP,Both EFSA and NCAs attend
+Task,2_3.8,Contribute to RPSA summary,Attend RPSA advice meeting,RPSA advice contribution provided,Meeting minutes; NCA interventions,TP;TP,Summary contributions,TP,Summary reflects both opinions if disagreement
+End Event,,RPSA advice contribution provided,Collaborate on written RPSA advice and summary AND Contribute to RPSA summary,N/A,N/A,,N/A,,

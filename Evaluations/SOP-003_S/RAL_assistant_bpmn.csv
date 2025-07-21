@@ -1,0 +1,7 @@
+Object Type,Object Name,Corresponding Steps,Predecessor,Successor,Input Data,Input Data Assesment,Output Data,Output Data Assesment,Additional Information
+Start Event,Tollgate #2 Passed,,N/A,Receive Tollgate #2 Notification,N/A,,N/A,,
+Receive Task,Receive Tollgate #2 Notification,2_2.5,Tollgate #2 Passed,Send Tollgate #2 Report to Case Management Tool,Notification of Tollgate #2 passing,TP,Notification received,TP,
+Send Task,Send Tollgate #2 Report to Case Management Tool,2_2.5,Receive Tollgate #2 Notification,Receive Tollgate #3 Notification,Notification received,TP,Tollgate #2 date recorded in CMT,TP,
+Receive Task,Receive Tollgate #3 Notification,2_2.8,Send Tollgate #2 Report to Case Management Tool,Send Tollgate #3 Report to Case Management Tool,Notification of Tollgate #3 passing,TP,Notification received,TP,
+Send Task,Send Tollgate #3 Report to Case Management Tool,2_2.8,Receive Tollgate #3 Notification,End Condition,Notification received,TP,Tollgate #3 date recorded in CMT,TP,
+End Event,End Condition,,Send Tollgate #3 Report to Case Management Tool,N/A,N/A,,N/A,,

@@ -1,0 +1,10 @@
+Object Type,Object Name,Corresponding Steps,Predecessor,Successor,Input Data,Input Data Assesment,Output Data,Output Data Assesment,Additional Information
+Start Event,Start Condition,,N/A,Compile RAL meetings budget monitoring table,N/A,,N/A,,Start of SMU planning process
+Task,Compile RAL meetings budget monitoring table,1_1.1,Start Condition,Send meeting plan to RAL,Quarterly planning guidelines,TP,RAL meetings budget monitoring table,TP,SMU and RAL collaborate to list planned meetings
+Send Task,Send meeting plan to RAL,1_1.1,Compile RAL meetings budget monitoring table,Insert meeting participants in table,RAL meetings budget monitoring table,TP,RAL meetings budget monitoring table,TP,Message sent to RAL
+Task,Insert meeting participants in table,FP(1_1.4),Send meeting plan to RAL,Decide chairperson role,Participant roles instructions,,RAL meetings budget monitoring table,,"Identify participants (observers, experts, roles)"
+Task,Decide chairperson role,FP(1_1.6),Insert meeting participants in table,Confirm meeting information,Agenda complexity assessment,,Chairperson assignment decision,,SMU HoU decides based on complexity and sensitivity
+Task,Confirm meeting information,FP(1_1.7),Decide chairperson role,Meeting Held,RAL meetings budget monitoring table,,Confirmed meeting details,,"Meeting coordinator confirms date, location, nature"
+Intermediate Event,Meeting Held,,Confirm meeting information,Send approved minutes,N/A,,N/A,,Scientific meeting takes place
+Send Task,Send approved minutes,FP(1_3.3),Meeting Held,End Condition,Draft minutes,,Approved minutes,,Sent to RAL for publication
+End Event,End Condition,,Send approved minutes,N/A,N/A,,N/A,,End of SMU process

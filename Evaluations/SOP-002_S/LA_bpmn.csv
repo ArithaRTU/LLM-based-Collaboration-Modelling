@@ -1,0 +1,9 @@
+Object Type,Object Name,Corresponding Steps,Predecessor,Successor,Input Data,Input Data Assesment,Output Data,Output Data Assesment,Additional Information
+Start Event,Start DoI Assessment,,N/A,Receive DoI from SMUs,N/A,,N/A,,
+Receive Task,Receive DoI from SMUs,1_3.2,Start DoI Assessment,Assess and Validate DoI,Declaration of Interest,TP,Declaration of Interest,TP,
+Task,Assess and Validate DoI,1_3.2,Receive DoI from SMUs,Is DoI Compatible?,Declaration of Interest,TP,Validated DoI,TP,Uses EFSA’s Policy on Independence
+Gateway (Exclusive),Is DoI Compatible?,1_3.2,Assess and Validate DoI,Send Valid DoI to SMUs OR Send Rejection Notification to SMUs,,,,,
+Send Task,Send Valid DoI to SMUs,1_3.2,Is DoI Compatible?,,Validated DoI,TP,Validated DoI,TP,
+Send Task,Send Rejection Notification to SMUs,1_3.2,Is DoI Compatible?,,Declaration of Interest,TP,Rejected DoI Notification,TP,
+End Event,End Process – Valid DoI,,Send Valid DoI to SMUs,N/A,N/A,,N/A,,
+End Event,End Process – Rejected DoI,,Send Rejection Notification to SMUs,N/A,N/A,,N/A,,

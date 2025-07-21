@@ -1,0 +1,12 @@
+Message Sent,Sending Task,Sending Participant,Receiving Task,Receiving Participant,
+RAL meetings budget monitoring table,Send meeting plan to RAL,SMU,Receive Planned Meetings Table,RAL,TP
+RAL meetings budget monitoring table,Send meeting plan to RAL,SMU,Receive Meeting Details in MOS,LA,TP
+Publication Request,Send Publication Request,RAL,Receive Publication Request,Webupdates,TP
+Missing Message Flows,,,,,
+Missing Send Events ,Missing Receive Events,,,,
+Send Nomination to EFSA(MS Competent Authorities),None,,,,
+None,Receive Nomination Request(MS Competent Authorities_,,,,
+None,Receive Attendance List(Finance_Unit),,,,
+NOne,Receive Attendance List(RAL),,,,
+Send LOI(RAL),None,,,,
+Send approved minutes(SMU),Receive Draft Minutes(Meeting_Coordinators),,,,

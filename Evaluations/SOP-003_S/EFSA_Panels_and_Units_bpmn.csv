@@ -1,0 +1,28 @@
+Object Type,Object Name,Corresponding Steps,Predecessor,Successor,Input Data,Input Data Assesment,Output Data,Output Data Assesment,Additional Information
+Start Event,Start Condition,,N/A,Identify Trigger Type,N/A,,N/A,,
+Gateway (Exclusive),Identify Trigger Type,2_2.0,Start Condition,Receive Cross-Cutting Consultation OR Record Need in Work Programme,,,,,Determines if guidance need is cross-cutting or sectoral/EC mandate
+Receive Task,Receive Cross-Cutting Consultation,2_2.2,Identify Trigger Type,Provide Feedback on Topics,Consultation Request,TP,Feedback Proposals,TP,
+Task,Provide Feedback on Topics,2_2.2,Receive Cross-Cutting Consultation,Participate in Plenary Meeting,Feedback Proposals,TP,Feedback Summary,TP,
+Task,Participate in Plenary Meeting,2_2.4,Provide Feedback on Topics,Record Need in Work Programme,Feedback Summary,TP,Agreed Topics,TP,
+Task,Record Need in Work Programme,2_2.4,Identify Trigger Type OR Participate in Plenary Meeting,Draft Self-Task Mandate,Agreed Topics OR EC/Internal Request,TP,Work Programme Entry,TP,
+Task,Draft Self-Task Mandate,2_2.1,Record Need in Work Programme,Select Working Group,Work Programme Entry,TP,Draft Mandate,TP,
+Task,Select Working Group,2_2.1,Draft Self-Task Mandate,Receive Draft Guidance for Consultation,Draft Mandate,TP,Working Group Established,TP,Reference SOP 6 for WG establishment
+Receive Task,Receive Draft Guidance for Consultation,2_2.4,Select Working Group,Endorse Draft for Consultation,Draft Guidance Document,TP,Consultation Draft,TP,
+Task,Endorse Draft for Consultation,2_2.4,Receive Draft Guidance for Consultation,Receive Public Consultation Outcome,Consultation Draft,TP,Endorsed Consultation Draft,TP,
+Receive Task,Receive Public Consultation Outcome,2_2.4,Endorse Draft for Consultation,Provide Consultation Comments,Stakeholder Comments,TP,Consolidated Comments,TP,
+Task,Provide Consultation Comments,2_2.4,Receive Public Consultation Outcome,Receive Finalized Draft for Adoption,Consolidated Comments,TP,Reviewed Consultation Input,TP,
+Receive Task,Receive Finalized Draft for Adoption,2_2.7,Provide Consultation Comments,Adopt Draft Guidance,Reviewed Consultation Input,TP,Adoption Proposal,TP,
+Task,Adopt Draft Guidance,2_2.7,Receive Finalized Draft for Adoption,Receive Implementation Plan,Adoption Proposal,TP,Adopted Guidance,TP,
+Receive Task,Receive Implementation Plan,3_3.1,Adopt Draft Guidance,Approve Implementation Plan,Implementation Plan,TP,Plan Approval Decision,FP,
+Task,Approve Implementation Plan,3_3.1,Receive Implementation Plan,Update Procedures with New Guidance,Implementation Plan,TP,Approved Implementation Plan,TP,
+Task,Update Procedures with New Guidance,3_3.3,Approve Implementation Plan,Provide Monitoring Feedback,Approved Implementation Plan; Adopted Guidance,TP;TP,Updated Procedures,TP,
+Task,Provide Monitoring Feedback,3_5.2,Update Procedures with New Guidance,Receive Review Call,Updated Procedures,TP,Implementation Feedback,TP,
+Receive Task,Receive Review Call,4_6.1,Provide Monitoring Feedback,Perform Guidance Review,Review Request,TP,Review Plan,FP,
+Task,Perform Guidance Review,4_6.2,Receive Review Call,Decide Review Outcome,Review Plan; Implementation Feedback,TP;TP,Review Findings,TP,
+Gateway (Exclusive),Decide Review Outcome,4_6.3,Perform Guidance Review,Keep Document OR Archive Document OR Revise Document,Review Findings,FP,Review Decision,FP,
+Task,Keep Document,4_6.3,Decide Review Outcome,End Condition,Review Decision,TP,N/A,Guidance Document(FN),No further action needed
+Task,Archive Document,4_6.3,Decide Review Outcome,End Condition,Review Decision,TP;Guidance Document(FN),Archived Guidance,TP,Inform Repository Manager
+Task,Revise Document,4_6.4,Decide Review Outcome,Prioritise Revision,Review Decision,TP,Revision Mandate,TP,
+Task,Prioritise Revision,4_7.1,Revise Document,Communicate Revision Plan,Revision Mandate,TP,Revision Schedule,TP,
+Send Task,Communicate Revision Plan,4_8.0,Prioritise Revision,Receive Implementation Plan,Revision Schedule,TP,Revision Request,TP,Follows SOP 014
+End Event,End Condition,,Keep Document OR Archive Document OR Communicate Revision Plan,N/A,N/A,,N/A,,

@@ -1,0 +1,14 @@
+Object Type,Object Name,Corresponding Steps,Predecessor,Successor,Input Data,Input Data Assesment,Output Data,Output Data Assesment,Additional Information
+Start Event,Start Process,,N/A,Receive Data Collection Calendar,N/A,,N/A,,
+Receive Task,Receive Data Collection Calendar,1_1.1,Start Process,Agree Data Collection Calendar,N/A,,Calendar Dates; Publication Dates,TP;TP,
+Task,Agree Data Collection Calendar,1_1.1,Receive Data Collection Calendar,Publish Supporting Documents,Calendar Dates; Publication Dates,TP;TP,Agreed Calendar,TP,"With SO, MSs and EC"
+Task,Publish Supporting Documents,1_2.1,Agree Data Collection Calendar,Report Type EUOHZ?,Agreed Calendar; Applicable Legislation,TP;TP,Supporting Documents,TP,"Manuals, catalogues, data dictionaries"
+Gateway (Exclusive),Report Type EUOHZ?,1_2.0,Publish Supporting Documents,Receive Population Data OR Launch Data Collection,,,,,Condition: if report type = EUOHZ
+Receive Task,Receive Population Data,1_2.0,Report Type EUOHZ?,Insert Population Data,N/A,Population Data(FN),Population Data,TP,From SO
+Task,Insert Population Data,1_2.0,Receive Population Data,Launch Data Collection,Population Data,TP,DWH Updated,TP,
+Task,Launch Data Collection,1_3.1,Report Type EUOHZ? OR Insert Population Data,Close Data Collection,Agreed Calendar,TP,Raw Data,TP,Via EFSA DCF
+Task,Close Data Collection,1_3.4(incomplete),Launch Data Collection,Produce Tables and Graphs,Raw Data,TP,Validated Data,TP,
+Task,Produce Tables and Graphs,1_4.1,Close Data Collection,Support Report Drafting,Validated Data,TP,Tables; Graphs; Maps,TP;TP;TP,
+Task,Support Report Drafting,1_5.0,Produce Tables and Graphs,End Process,Tables; Graphs; Maps,TP;TP;TP,Draft Input,TP,
+End Event,End Process,,Support Report Drafting,N/A,N/A,,N/A,,
+Missing Steps: 1_3.4,,,,,,,,,

@@ -1,0 +1,20 @@
+Message Sent,Sending Task,Sending Participant,Receiving Task,Receiving Participant,Assessment
+Publication Date Notification,Inform CO of Publication Date,Scientific Officer,Receive Publication Date,Communication Officer,TP
+Publication Date Notification,Inform CO of Publication Date,Scientific Officer,Receive Publication Date,ENGAGE Communication Officer,TP
+Tollgate Dates Recorded in Appian,Communicate Tollgate Dates to RAL,Scientific Officer,Receive Tollgate Dates,RAL Assistant,TP
+Population Data in DWH,Provide Updated Annual Population Data to DO,Scientific Officer,Receive Population Data,Data Officer,TP
+AR Submission for Approval and Plagiarism Check,Submit Final AR Link to RAL Assistant,Scientific Officer,Receive Final AR Link for Check,RAL Assistant,TP
+Approval Notification,Send Approval Message,ECDC Scientific Officer,Receive AR Approval Notification,Communication Officer,TP
+Approval Notification,Send Approval Message,ECDC Scientific Officer,Receive AR Approval Notification,Risk Assessment Logistics Unit,TP
+,,,,,
+Missing Message Flows,,,,,
+Missing Sending Events,Missing Receiving Events,,,,
+Send Contract Details to SO(Finance Unit),None,,,,
+None,Receive Request for Procurement Support(Finance Unit),,,,
+None,Receive Data Collection Calendar(Data Officer),,,,
+Send Change Request(ECDC Scientific Officer),None,,,,
+None,Receive Final AR Link(ECDC Scientific Officer),,,,
+Inform DO of Data Pipeline Changes(Scientific Officer),None,,,,
+Send Plan of Analysis to Appian(Scientific Officer),None,,,,
+Share Preliminary Draft AR with RCs(Scientific Officer),None,,,,
+Liaise with ENGAGE CO for Communication Plan(Scientific Officer),None,,,,

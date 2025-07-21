@@ -1,0 +1,9 @@
+Object Type,Object Name,Corresponding Steps,Predecessor,Successor,Input Data,Input Data Assesment,Output Data,Output Data Assesement,Additional Information
+Start Event,Start Condition,,N/A,Receive Topic Proposals,N/A,,N/A,,
+Receive Task,Receive Topic Proposals,1_1.2,Start Condition,Review and Prioritize Topics,Topic Proposals,TP,Topic Proposals,TP,
+Task,Review and Prioritize Topics,1_1.2,Receive Topic Proposals,Send Priorities to SC,Topic Proposals,TP,Priorities List,TP,"Consider impact, consistency, number of panels"
+Send Task,Send Priorities to SC,1_1.3,Review and Prioritize Topics,Receive Implementation Plan,Priorities List,TP,Priorities Feedback,TP,
+Receive Task,Receive Implementation Plan,1_1.3,Send Priorities to SC,Assess Implementation Plan,Implementation Plan,TP,Implementation Plan,TP,
+Task,Assess Implementation Plan,1_1.3,Receive Implementation Plan,Send Feedback on Implementation Plan,Implementation Plan,TP,Implementation Feedback,TP,Include approval or comments
+Send Task,Send Feedback on Implementation Plan,1_1.3,Assess Implementation Plan,End Condition,Implementation Feedback,TP,Reviewed Implementation Plan,TP,
+End Event,End Condition,,Send Feedback on Implementation Plan,N/A,N/A,,N/A,,

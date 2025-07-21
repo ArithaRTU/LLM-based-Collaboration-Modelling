@@ -1,0 +1,24 @@
+Object Type,Object Name,Corresponding Steps,Predecessor,Successor,Input Data,Input data assesment,Output Data,Output data assesment,Additional Information
+Start Event,Start HUCAP Process,,N/A,Define call plan and timelines,N/A,,N/A,,
+Task,Define call plan and timelines,1_1.1,Start HUCAP Process,Define requirements and assessment methodology,Terms of office status,TP,Call project plan,TP,
+Task,Define requirements and assessment methodology,1_1.2,Define call plan and timelines,Prepare call documentation,Call project plan,TP,Requirements & assessment methodology,TP,
+Task,"Prepare call documentation (EOI call, evaluation guide, communication plan)",1_1.3,Define requirements and assessment methodology,Submit call for approval,Requirements & assessment methodology,TP,Call for EOIs; Evaluation guide; Communication plan,TP;TP;TP,
+Send Task,Submit call for approval,1_1.4,Prepare call documentation,Receive call approval,Call for EOIs; Evaluation guide; Communication plan,TP;TP;TP,Approved call documents,TP,
+Receive Task,Receive call approval,1_1.4,Submit call for approval,Translate call and share criteria,Approved call documents,TP,Approved call documents,FP,
+Task,Translate call and share criteria,1_1.5,Receive call approval,Publish call,Approved call documents,TP,Translated call; Criteria dissemination,TP;TP,
+Send Task,Publish call,1_1.7,Translate call and share criteria,Implement communication plan,Translated call; Criteria dissemination,TP;TP,Published call,TP,
+Task,Implement communication plan,1_1.8,Publish call,Sufficient applications?,Published call,Communication plan(FN),Applications received,Communication plan implementation(FN),
+Gateway (Exclusive),Sufficient applications?,1_1.9,Implement communication plan,Prepare evaluation instructions (Sufficient) OR Publish call (Insufficient),Applications received,FP,,-,"If insufficient candidate count or expertise, loop back to republish"
+Task,Prepare evaluation instructions,1_2.3,Sufficient applications?,Assessments submitted,Applications received,FP,Evaluation instructions,TP,Includes guidance and methodology
+Intermediate Event,Assessments submitted,1_2.5,Prepare evaluation instructions,Receive endorsed draft list,N/A,-,Completed assessments,FP,Evaluators submit evaluations
+Task,Receive endorsed draft list,1_3.5,Assessments submitted,Submit SP/SC documentation to ED,Completed assessments,TP,Draft list of suitable candidates,TP,Endorsed by EMC Chair
+Send Task,Submit SP/SC documentation to ED,1_3.5,Receive endorsed draft list,Receive ED approval for SP/SC,Draft list of suitable candidates; Selection report; Multidisciplinary expertise indication; Reserve list proposal,TP;TP;TP;TP,Documentation package submitted,TP,Includes selection report and proposals
+Receive Task,Receive ED approval for SP/SC,1_3.6,Submit SP/SC documentation to ED,Invite appointed experts,Documentation package submitted,TP,Approved SP/SC membership list,TP,ED review and approval
+Task,Invite appointed experts and notify others,1_4.3,Receive ED approval for SP/SC,Receive replacement request,Approved SP/SC membership list,TP,Invitations sent; Notifications sent,TP;TP,Invitation letters issued
+Receive Task,Receive replacement request,1_5.1,Invite appointed experts and notify others,Identify replacement candidate,Replacement/increase need,TP,Replacement request details,TP,From SMU
+Task,Identify replacement candidate,1_5.2(FP),Receive replacement request,Candidate available?,Reserve list,TP,Candidate proposal,TP,Screen reserve list for matching profile
+Gateway (Exclusive),Candidate available?,1_5.4,Identify replacement candidate,Submit appointment proposal to ED (Yes) OR Define call plan and timelines (No),Candidate proposal,FP,,,"If no candidate, restart call procedure"
+Send Task,Submit appointment proposal to ED,1_5.4,Candidate available?,Receive ED approval for replacement,Candidate proposal,TP,Appointment proposal,TP,Prepared by HUCAP
+Receive Task,Receive ED approval for replacement,1_5.4,Submit appointment proposal to ED,Invite replacement expert,Appointment proposal,TP,Approved replacement proposal,TP,ED review
+Task,Invite replacement expert,1_5.4,Receive ED approval for replacement,HUCAP process completion,Approved replacement proposal,TP,Invitation sent,TP,
+End Event,HUCAP process completion,,Invite replacement expert,N/A,N/A,,N/A,,

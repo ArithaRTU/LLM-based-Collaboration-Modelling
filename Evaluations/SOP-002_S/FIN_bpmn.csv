@@ -1,0 +1,6 @@
+Object Type,Object Name,Corresponding Steps,Predecessor,Successor,Input Data,Input Data Assesment,Output Data,Output Data Assesment,Additional Information
+Start Event,Start Condition,,N/A,Receive translation request,N/A,,N/A,,
+Receive Task,Receive translation request,1_1.5,Start Condition,Translate call,Call for expressions of interest Document,TP,Call for expressions of interest Document,TP,
+Task,Translate call,1_1.5,Receive translation request,Send translated call,Call for expressions of interest Document,TP,Translated call Document,TP,Ensure translation into all EU official languages
+Send Task,Send translated call,1_1.5,Translate call,End Condition,Translated call Document,TP,Translated call Document,TP,
+End Event,End Condition,,Send translated call,N/A,N/A,,N/A,,

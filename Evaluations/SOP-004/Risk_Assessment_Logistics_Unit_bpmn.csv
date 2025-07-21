@@ -1,0 +1,12 @@
+Object Type,Object Name,Corresponding Steps,Predecessor,Successor,Input Data,Input Data Assesment,Output Data,Output Data Assesment,Additional Information
+Start Event,Start Process,,N/A,Receive Tollgate Dates,N/A,,N/A,,
+Receive Task,Receive Tollgate Dates,,Start Process,Record Tollgate Dates,Tollgate Dates,,Tollgate Dates,,
+Task,Record Tollgate Dates,,Receive Tollgate Dates,Receive Draft AR Link,Tollgate Dates,,Recorded Tollgate Dates,,
+Receive Task,Receive Draft AR Link,,Record Tollgate Dates,Submit AR for Plagiarism and Language Editing,Final AR Draft Link,,Final AR Draft Link,,
+Send Task,Submit AR for Plagiarism and Language Editing,,Receive Draft AR Link,Receive Edited AR Draft and Report,Final AR Draft Link,,Plagiarism Report; Edited AR Draft,,
+Receive Task,Receive Edited AR Draft and Report,,Submit AR for Plagiarism and Language Editing,Receive Final AR Link for Approval,Edited AR Draft; Plagiarism Report,,Edited AR Draft; Plagiarism Report,,
+Receive Task,Receive Final AR Link for Approval,,Receive Edited AR Draft and Report,Submit AR for Approval,Final AR Link,,Final AR Link,,
+Send Task,Submit AR for Approval,,Receive Final AR Link for Approval,Receive AR Approval Notification,Final AR Link,,AR Submission Record,,
+Receive Task,Receive AR Approval Notification,,Submit AR for Approval,Publish AR,Approval Notification; Approved AR Link,,Approved AR,,
+Task,Publish AR,,Receive AR Approval Notification,End Process,Approved AR,,Published AR,,Apply confidentiality sanitization
+End Event,End Process,,Publish AR,N/A,N/A,,N/A,,

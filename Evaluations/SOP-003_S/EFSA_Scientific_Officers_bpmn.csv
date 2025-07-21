@@ -1,0 +1,9 @@
+Object Type,Object Name,Corresponding Steps,Predecessor,Successor,Input Data,Input Data Assesment,Output Data,Output Data Assesment,Additional Information
+Start Event,Guidance ready for public consultation,,N/A,Receive consultation comments,N/A,,N/A,,
+Task,Report passing Tollgate #2,2_2.5,Guidance ready for public consultation,Receive consultation comments,Finalised Draft Guidance,TP,Tollgate #2 Report,TP,
+Receive Task,Receive consultation comments,2_2.6,Report passing Tollgate #2,Address comments and finalise draft,Draft Guidance,TP,Consolidated comments,TP,
+Task,Address comments and finalise draft,2_2.6,Receive consultation comments,Submit draft for adoption,Draft Guidance; Consolidated comments,TP;TP,Finalised Draft Guidance,TP,
+Task,Submit draft for adoption,2_2.7,Address comments and finalise draft,Receive adoption confirmation,Finalised Draft Guidance,TP,Submitted Draft for Adoption,TP,
+Receive Task,Receive adoption confirmation,2_2.7,Submit draft for adoption,Report passing Tollgate #3,Submitted Draft for Adoption,TP,Adoption confirmation,TP,
+Task,Report passing Tollgate #3,2_2.8,Receive adoption confirmation,End of guidance adoption process,Adoption confirmation,TP,Tollgate #3 Report,TP,
+End Event,End of guidance adoption process,,Report passing Tollgate #3,N/A,N/A,,N/A,,

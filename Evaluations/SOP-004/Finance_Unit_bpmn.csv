@@ -1,0 +1,7 @@
+Object Type,Object Name,Corresponding Steps,Predecessor,Successor,Input Data,Input Data Assesment,Output Data,Output Data Assesment,Additional Information
+Start Event,Start Condition,,N/A,Receive Request for Procurement Support,N/A,,N/A,,
+Receive Task,Receive Request for Procurement Support,1_5.1,Start Condition,Is Procurement Required?,Procurement Support Request,TP,N/A,FP;FN(Procurement Support Request),
+Gateway (Exclusive),Is Procurement Required?,1_5.1,Receive Request for Procurement Support,Arrange Contract OR End Condition,,,,,
+Task,Arrange Contract,1_5.1,Is Procurement Required?,Send Contract Details to SO,Procurement Support Request,TP,Contract Agreement,TP,Budget approval required
+Send Task,Send Contract Details to SO,1_5.1,Arrange Contract,End Condition,Contract Agreement,TP,Contract Details,TP,
+End Event,End Condition,,Send Contract Details to SO OR Is Procurement Required?,N/A,N/A,,N/A,,

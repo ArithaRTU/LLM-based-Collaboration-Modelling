@@ -1,0 +1,12 @@
+Object Type,Object Name,Corresponding Steps,Predecessor,Successor,Input Data,Input Data Assesment,Output Data,Output Data Assesment,Additional Information
+Start Event,Start Guidance Lifecycle Implementation,,N/A,Receive Implementation Plan,N/A,,N/A,,
+Receive Task,Receive Implementation Plan,3_3.1,Start Guidance Lifecycle Implementation,Approval Decision,Implementation Plan Document,TP,Implementation Plan Document,TP,
+Gateway (Exclusive),Approval Decision,3_3.1,Receive Implementation Plan,Approve Implementation Plan (if approved) OR Request Plan Revision (if rejected),,,,,Decision based on plan completeness
+Task,Approve Implementation Plan,3_3.1,Approval Decision,Parallel Tasks,Implementation Plan Document,TP,Approved Plan Document,TP,
+Send Task,Request Plan Revision,3_3.1,Approval Decision,End of Management Involvement,Implementation Plan Document,TP,Revision Request Note,TP,
+Gateway (Parallel),Parallel Tasks,3_3.1,Approve Implementation Plan,Oversee Dissemination AND Oversee Monitoring,,,,,
+Task,Oversee Dissemination,3_4.2,Parallel Tasks,End of Management Involvement,,,,,Ensure guidance is published in EFSA Journal
+Task,Oversee Monitoring,4_5.1,Parallel Tasks,Monitoring Trigger,Approved Plan Document,TP,Monitoring Plan Data,TP,Regular quality checks of guidance application
+Intermediate Event,Monitoring Trigger,4_5.1,Oversee Monitoring,Initiate Review of Guidance,N/A,,N/A,,
+Task,Initiate Review of Guidance,4_6.2(FP),Monitoring Trigger,End of Management Involvement,Monitoring Plan Data,TP,Review Request,TP,Launch review according to 5-year cycle or ad-hoc
+End Event,End of Management Involvement,,Oversee Dissemination AND Initiate Review of Guidance,N/A,N/A,,N/A,,

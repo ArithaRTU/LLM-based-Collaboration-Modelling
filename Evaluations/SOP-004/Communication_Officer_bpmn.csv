@@ -1,0 +1,7 @@
+Object Type,Object Name,Corresponding Steps,Predecessor,Successor,Input Data,Input Data Assesment,Output Data,Output Data Assesment,Additional Information
+Start Event,Start Condition,,N/A,Receive Publication Date,N/A,,N/A,,
+Receive Task,Receive Publication Date,1_1.2,Start Condition,Draft Initial Communication Plan,Publication Date Info,TP,Publication Date Data,TP,
+Task,Draft Initial Communication Plan,1_1.2,Receive Publication Date,Receive AR Approval Notification,Publication Date Data,TP,Initial Communication Plan,TP,
+Receive Task,Receive AR Approval Notification,FP(1_6.3),Draft Initial Communication Plan,Finalise Communication Plan,AR Approval Notification Data,,Approval Confirmation Data,,
+Task,Finalise Communication Plan,FP(1_6.3),Receive AR Approval Notification,End Condition,Initial Communication Plan; Approval Confirmation Data,,Final Communication Plan,,"Plan includes web story, press release, data visualisation"
+End Event,End Condition,,Finalise Communication Plan,N/A,N/A,,N/A,,

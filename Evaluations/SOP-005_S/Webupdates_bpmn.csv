@@ -1,0 +1,5 @@
+Object Type,Object Name,Corresponding Steps,Predecessor,Successor,Input Data,Input Data Assesment,Output Data,Otput Data Assesment,Additional Information
+Start Event,Start Condition,,N/A,Receive Publication Request,N/A,,N/A,,
+Receive Task,Receive Publication Request,1_1.2,Start Condition,Publish Meeting Details on EFSA website,MeetingDetailsRequest,TP,MeetingDetailsData,TP,
+Task,Publish Meeting Details on EFSA website,1_1.2,Receive Publication Request,End Condition,MeetingDetailsData,TP,PublishedMeetingDetails,TP,"Must publish dates, location and type of meeting for year N (and N+1 if needed)"
+End Event,End Condition,,Publish Meeting Details on EFSA website,N/A,N/A,,N/A,,

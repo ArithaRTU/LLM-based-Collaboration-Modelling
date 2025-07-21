@@ -1,0 +1,8 @@
+Object Type,Object Name,Corresponding Steps,Predecessor,Successor,Input Data,,Output Data,Input Data Assesment,Additional Information
+Start Event,Start Condition,,N/A,Receive Final AR Link,N/A,,N/A,,
+Receive Task,Receive Final AR Link,1_6.2.1,Start Condition,Review AR Document,N/A,,Final AR Document,TP,
+Task,Review AR Document,1_6.2.1,Receive Final AR Link,Approval Decision,Final AR Document,TP,N/A,FN(Document Review),Evaluate completeness and compliance
+Gateway (Exclusive),Approval Decision,1_6.2.1,Review AR Document,Send Approval Message (Approved) OR Send Change Request (Not Approved),N/A,,N/A,,Decision whether AR meets joint EFSA-ECDC criteria
+Send Task,Send Approval Message,1_6.2.1,Approval Decision,End Condition,Final AR Document,TP,Approval Notification,TP,
+Send Task,Send Change Request,1_6.2.1,Approval Decision,End Condition,Final AR Document,TP,Change Request Notification,TP,
+End Event,End Condition,,Send Approval Message; Send Change Request,N/A,N/A,,N/A,,

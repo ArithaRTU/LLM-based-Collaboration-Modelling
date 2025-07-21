@@ -1,0 +1,23 @@
+Object Type,Object Name,Corresponding Steps,Predecessor,Successor,Input Data,Input Data Assesment,Output Data,Output Data Assesment,Additional Information
+Start Event,Start SOP_004,,N/A,Agree on Reporting and Consultation Dates,N/A,,N/A,,
+Task,Agree on Reporting and Consultation Dates,1_1.1,Start SOP_004,Inform CO of Publication Date,Legal Framework; Previous Year Network Meeting Minutes,TP,"Agreed Dates for Data Collection, Validation, Consultation and Publication",TP,Collaboration with DO
+Send Task,Inform CO of Publication Date,1_1.2,Agree on Reporting and Consultation Dates,Communicate Tollgate Dates to RAL,Agreed Publication Date,TP,Publication Date Notification,TP,Message to Communication Officer
+Send Task,Communicate Tollgate Dates to RAL,1_1.3,Inform CO of Publication Date,Inform DO of Data Pipeline Changes,"Agreed Tollgate 1, 2, 3 Dates",TP,Tollgate Dates Recorded in Appian,TP,
+Send Task,Inform DO of Data Pipeline Changes,1_1.0,Communicate Tollgate Dates to RAL,Publish Data Collection Supporting Materials,Required Data Pipeline Updates,TP,Acknowledgement of Pipeline Changes,TP,
+Task,Publish Data Collection Supporting Materials,1_2.1,Inform DO of Data Pipeline Changes,Provide Updated Annual Population Data to DO,"Previous Year Manuals, Catalogues, Data Dictionaries",TP,Published Supporting Documents,TP,Jointly with DO
+Send Task,Provide Updated Annual Population Data to DO,1_2.0,Publish Data Collection Supporting Materials,Perform Scientific Data Validation,EUROSTAT Population Data,TP,Population Data in DWH,TP,For EUOHZ only
+Task,Perform Scientific Data Validation,1_3.3,Provide Updated Annual Population Data to DO,Assess Overview Reports and Perform Analyses,Collected Data from DCF,TP,Validated Scientific Data,TP,Applies validation rules
+Task,Assess Overview Reports and Perform Analyses,1_4.1,Perform Scientific Data Validation,Send Plan of Analysis to Appian,MicroStrategy Reports; Validated Data,TP;TP,Analysis Plan,TP,Tollgate #1 deliverable
+Send Task,Send Plan of Analysis to Appian,1_4.1,Assess Overview Reports and Perform Analyses,Draft Annual Report Chapters,Analysis Plan,TP,Plan Recorded in Appian,TP,Triggers Tollgate #1
+Task,Draft Annual Report Chapters,1_5.1,Send Plan of Analysis to Appian,Check Draft Quality and Readiness,Analysis Plan; Contractor Input,TP;TP,Draft AR Chapters,TP,In coordination with DO and FIN if outsourced
+Task,Check Draft Quality and Readiness,1_5.3,Draft Annual Report Chapters,Draft Ready?,Draft AR Chapters,TP,Readiness Decision,TP,"Quality, completeness, consistency check"
+Gateway (Exclusive),Draft Ready?,1_5.3,Check Draft Quality and Readiness,Share Preliminary Draft AR with RCs (Yes) OR Draft Annual Report Chapters (No),Readiness Decision,TP,,,
+Send Task,Share Preliminary Draft AR with RCs,1_5.4,Draft Ready? (Yes),Comments Received,Draft AR Chapters,TP,Shared Draft AR,TP,For consultation with RCs and EC
+Task,Draft Annual Report Chapters,FP,Draft Ready? (No),Check Draft Quality and Readiness,Draft AR Chapters,,Revised Draft AR Chapters,,
+Intermediate Event,Comments Received,1_5.5,Share Preliminary Draft AR with RCs,Address Consultation Comments,N/A,,N/A,,
+Task,Address Consultation Comments,1_5.6,Comments Received,Submit Final AR Link to RAL Assistant,Consultation Comments; Amended Data,TP;TP,Finalised AR ready for approval,TP,Comments stored in DMS
+Send Task,Submit Final AR Link to RAL Assistant,1_5.0;1_6.2,Address Consultation Comments,Post-Approval Preparations,Finalised AR Link,TP,AR Submission for Approval and Plagiarism Check,TP,Sets Tollgate #3 in Appian
+Gateway (Parallel),Post-Approval Preparations,,Submit Final AR Link to RAL Assistant,Liaise with ENGAGE CO for Communication Plan AND Implement Confidentiality Decisions on AR,,,,,
+Send Task,Liaise with ENGAGE CO for Communication Plan,1_6.2,Post-Approval Preparations,End Condition,AR Publication Schedule,TP,Communication Plan,TP,
+Task,Implement Confidentiality Decisions on AR,1_6.4,Post-Approval Preparations,End Condition,Approved AR; Confidentiality Assessment,TP;TP,Sanitized AR,TP,According to SOP_020
+End Event,End Condition,,Liaise with ENGAGE CO for Communication Plan; Implement Confidentiality Decisions on AR,N/A,N/A,,N/A,,

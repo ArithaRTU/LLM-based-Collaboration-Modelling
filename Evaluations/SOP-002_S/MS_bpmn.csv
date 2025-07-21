@@ -1,0 +1,5 @@
+Object Type,Object Name,Corresponding Steps,Predecessor,Successor,Input Data,Input Data Assesment,Output Data,Output Data Assesment,Additional Information
+Start Event,Start Condition,,N/A,Receive Call Details,N/A,,N/A,,
+Receive Task,Receive Call Details,1_1.8,Start Condition,Disseminate Call,N/A,,Call Criteria; Expertise Requirements,TP;TP,
+Send Task,Disseminate Call,1_1.8,Receive Call Details,End Condition,Call Criteria; Expertise Requirements,TP;TP,Dissemination Record,TP,
+End Event,End Condition,,Disseminate Call,N/A,N/A,,N/A,,

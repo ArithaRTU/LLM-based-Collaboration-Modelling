@@ -1,0 +1,26 @@
+Object Type,Object Name,Predecessor,Successor,Input Data,Input Data Assesment,Output Data,Output Data Assesemtn,Additional Information
+Start Event,Start Condition,N/A,Collect Proposals,N/A,,N/A,,
+Receive Task,Collect Proposals,Start Condition,Determine Scope,Topic proposals from Panels/SMUs and DG Sante,,Collected proposals,,
+Gateway (Exclusive),Determine Scope,Collect Proposals,Consult Units and Forums (Cross-cutting) OR Include in Work Programme (Sectoral),,,,,
+Task,Consult Units and Forums,Determine Scope,Discuss in SC Plenary,Collected proposals,,"Feedback from units, panels and forums",,Involves Advisory Forum and Stakeholder Forum
+Task,Discuss in SC Plenary,Consult Units and Forums,Include in Work Programme,Feedback from consultations,,Agreed topics and preliminary prioritisation,,
+Task,Include in Work Programme,Determine Scope OR Discuss in SC Plenary,Mandate Intake,Agreed topics and prioritisation,,Updated yearly work programme,,
+Task,Mandate Intake,Include in Work Programme,Existing WG?,Updated work programme,,Mandate document,,
+Gateway (Exclusive),Existing WG?,Mandate Intake,Request WG establishment (New WG) OR Update Existing WG (Existing WG),,,,,
+Send Task,Request WG establishment,Existing WG?,Develop Guidance Draft,Mandate document,,WG established,,
+Task,Update Existing WG,Existing WG?,Develop Guidance Draft,Mandate document,,WG updated,,
+Task,Develop Guidance Draft,Existing WG?,Public Consultation,Mandate document; WG expertise,,Draft guidance,,Consider case studies and pilot testing
+Send Task,Public Consultation,Develop Guidance Draft,Collect Comments,Draft guidance,,Public consultation launched,,
+Receive Task,Collect Comments,Public Consultation,Address Comments,Consultation feedback,,Collected comments,,
+Task,Address Comments,Collect Comments,Submit for Adoption,Collected comments; draft guidance,,Final draft guidance,,
+Send Task,Submit for Adoption,Address Comments,Develop Implementation Plan,Final draft guidance,,Adopted guidance,,
+Task,Develop Implementation Plan,Submit for Adoption,Dissemination and Capacity Building,Adopted guidance,,Implementation plan,,
+Gateway (Parallel),Dissemination and Capacity Building,Develop Implementation Plan,Publish in Journal AND Upload to Repository,,,,,
+Task,Publish in Journal,Dissemination and Capacity Building,Monitor Implementation,Adopted guidance; implementation plan,,Guidance published in EFSA Journal,,
+Task,Upload to Repository,Dissemination and Capacity Building,Monitor Implementation,Adopted guidance; implementation plan,,Guidance uploaded to Repository,,
+Task,Monitor Implementation,Dissemination and Capacity Building,Review Needed?,Implementation feedback; usage data,,Monitoring results,,Surveys and citation analysis
+Gateway (Exclusive),Review Needed?,Monitor Implementation,Conduct Review (Yes) OR End Condition (No),,,,,
+Task,Conduct Review,Review Needed?,Review Outcome Decision,Monitoring results,,Review outcome,,
+Gateway (Exclusive),Review Outcome Decision,Conduct Review,Revise Guidance (Revise) OR End Condition (Keep/Archive),,,,,Decision based on review criteria
+Task,Revise Guidance,Review Outcome Decision,Mandate Intake,Review outcome,,Revision plan,,New question number created in Open EFSA
+End Event,End Condition,Review Needed? OR Review Outcome Decision,N/A,N/A,,N/A,,

@@ -1,0 +1,9 @@
+Object Type,Object Name,Corresponding Steps,Predecessor,Successor,Input Data,Input Data Assesment,Output Data,Output Data Assesment,Additional Information
+Start Event,WG Mandate Received,,N/A,Receive Mandate,N/A,,N/A,,
+Receive Task,Receive Mandate,2_2.2,WG Mandate Received,Consider case studies and piloting phase,Mandate Document,TP,Mandate Document,TP,
+Task,Consider case studies and piloting phase,2_2.3,Receive Mandate,Send Draft for Consultation,Mandate Document,TP,Preliminary Draft,TP,WG reviews scope and tests applicability via pilot examples
+Send Task,Send Draft for Consultation,2_2.4,Consider case studies and piloting phase,Receive Consultation Comments,Preliminary Draft,TP,Draft Document for Consultation,TP,
+Receive Task,Receive Consultation Comments,2_2.4,Send Draft for Consultation,Address comments and finalise draft,Consultation Comments,TP,Consultation Comments,TP,
+Task,Address comments and finalise draft,2_2.6,Receive Consultation Comments,Send Final Draft for Adoption,Preliminary Draft; Consultation Comments,TP;TP,Final Draft,TP,Incorporates stakeholder and panel feedback
+Send Task,Send Final Draft for Adoption,2_2.7,Address comments and finalise draft,End Condition,Final Draft,TP,Final Draft Submitted,TP,Submitted to SC/SP for official adoption
+End Event,End Condition,,Send Final Draft for Adoption,N/A,N/A,,N/A,,

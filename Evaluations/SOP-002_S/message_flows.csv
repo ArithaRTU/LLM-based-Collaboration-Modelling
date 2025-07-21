@@ -1,0 +1,29 @@
+Message Sent,Sending Task,Sending Participant,Receiving Task,Receiving Participant,Evaluation
+Shared criteria to MS,Share Criteria with Member States,ENREL,Receive Call Details,MS,TP
+Dissemination Record,Disseminate Call,MS,Receive call for EoI planning,SMUs,TP
+Inputs for call document; Evaluation guide input,Submit requirements inputs,SMUs,Receive Call Inputs,COM,TP
+DoI request sent,Request DoI from candidates,SMUs,Receive DoI from SMUs,LA,FP
+Validated DoI,Send Valid DoI to SMUs,LA,Receive DoI submissions,SMUs,TP
+Membership proposal,Propose SP/SC membership shortlist,SMUs,Receive Proposal for SP/SC Memberships,EMC Chair,TP
+Approved call documents,Submit call for approval,HUCAP,Receive Call for expressions of interest,ED,TP
+Communication Plan,Send Communication Plan,COM,Receive Call for expressions of interest,ED,FP
+Translated call Document,Send translated call,FIN,Publish call,HUCAP,FP
+Documentation package submitted,Submit SP/SC documentation to ED,HUCAP,Receive Selection Documentation,ED,TP
+Selection documentation delivered to MB,Send Approved Documentation to MB,ED,Receive appointment documentation,MB,TP
+Assessment Report,Send Assessment Results,Evaluators,Receive Assessment Results,EMC Chair,TP
+Appointment Notification; Evaluation Guide Document,Send Appointment of Evaluators,EMC Chair,Receive Appointment,Evaluators,TP
+,,,,,
+Missing Message Flows,,,,,
+Missing Send Tasks,Missing Receive Tasks,,,,
+Publish call(HUCAP),None,,,,
+Submit appointment proposal to ED(HUCAP),Receive Selection Documentation(ED),,,,
+Send Rejection Notification to SMUs(LA),Receive DoI submissions(SMUs),,,,
+Send Endorsed Suitable Candidates to HUCAP(EMC Chair),Receive endorsed assessment outcomes(SMUs),,,,
+None,Receive Proposal for Evaluators and Evaluation Guide(EMC Chair),,,,
+None,Receive translation request(FIN),,,,
+None,Receive call approval(HUCAP),,,,
+None,Receive ED approval for SP/SC(HUCAP),,,,
+None,Receive replacement request(HUCAP),,,,
+None,Receive ED approval for replacement(HUCAP),,,,
+None,Receive additional appointment proposal(MB),,,,
+None,Receive Proposal for Evaluators and Evaluation Guide (Instructions)(EMC_Chair),,,,

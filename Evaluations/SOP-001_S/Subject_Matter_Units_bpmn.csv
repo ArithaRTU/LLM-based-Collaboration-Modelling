@@ -1,0 +1,9 @@
+Object Type,Object Name,Corresponding Step,Predecessor,Successor,Input Data,Input Data Evaluation,Output Data,Output Data Evaluation,Additional Information
+Start Event,Public consultation closed,,N/A,Receive comments,N/A,,N/A,,
+Receive Task,Receive comments,2_3.2,Public consultation closed,Delivery mode decision,,,Comments,TP,
+Gateway (Exclusive),Delivery mode decision,2_3.3,Receive comments,Provide written advice OR Organise meeting and provide oral advice,,,,,
+Send Task,Provide written advice,2_3.4,Delivery mode decision,Draft and send summary,Comments,TP,Written advice,TP,
+Task,Organise meeting and provide oral advice,2_3.5,Delivery mode decision,Draft and send summary,Comments,TP,Oral advice,TP,
+Task,Draft and send summary,2_3.6,Provide written advice; Organise meeting and provide oral advice,End Condition,Written advice; Oral advice,TP,Summary of advice,TP,Includes comments from public consultation and responses
+End Event,End Condition,,Draft and send summary,N/A,N/A,,N/A,,
+Missing Step: 2_3.7,,,,,,,,,

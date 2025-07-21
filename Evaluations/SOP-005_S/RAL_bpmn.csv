@@ -1,0 +1,15 @@
+Object Type,Object Name,Corresponding Steps,Predecessor,Successor,Input Data,Input Data Assesment,Output Data,Output Data Assesment,Additional Information
+Start Event,Start Quarterly Planning,,N/A,Receive Planned Meetings Table,N/A,,N/A,,
+Receive Task,Receive Planned Meetings Table,1_1.3,Start Quarterly Planning,Send Publication Request,Meeting Plan Table,TP,Meeting Plan Table,TP,RAL receives budget monitoring table
+Send Task,Send Publication Request,FP,Receive Planned Meetings Table,Populate MOS with Meeting Info,Meeting Plan Table,-,Publication Request,-,Request publication from Webupdates
+Task,Populate MOS with Meeting Info,1_1.0,Send Publication Request,Generate LOI Draft,Meeting Plan Table,TP,MOS Entry; LOI Draft,TP;TP,Enter details in Meeting Organisation System
+Task,Generate LOI Draft,1_2.1,Populate MOS with Meeting Info,Verify ADoI,MOS Entry,TP,LOI Draft,TP,Generate Letter of Invitation draft
+Task,Verify ADoI,1_2.0,Generate LOI Draft,ADoI Valid?,LOI Draft,TP,ADoI Status,TP,Check expert’s Annual Declaration of Interest
+Gateway (Exclusive),ADoI Valid?,1_2.0,Verify ADoI,Send LOI OR End Process,,,,,
+Send Task,Send LOI,1_2.2;1_2.3,ADoI Valid?,Publish Agenda,LOI Draft; ADoI Status,TP;TP,Invitation Email,TP,Send official invitation letter
+Task,Publish Agenda,1_2.4,Send LOI,Receive Attendance List,Meeting Plan Table,TP,Published Agenda,TP,Publish agenda on website 5 working days prior
+Receive Task,Receive Attendance List,1_3.1,Publish Agenda,Upload Attendance List to MOS,Attendance List,TP,Attendance List,TP,Receive attendance list from coordinator
+Task,Upload Attendance List to MOS,1_3.1,Receive Attendance List,Publish Minutes,Attendance List,TP,MOS Attendance Update,TP,Upload attendance for reimbursement
+Task,Publish Minutes,1_3.3,Upload Attendance List to MOS,End Process,MOS Attendance Update; Minutes Final,TP;TP,Published Minutes,TP,Publish within 15 working days
+End Event,End Process,,Publish Minutes,N/A,N/A,,N/A,,
+Missing Step: 1_1.2;1_1.6,,,,,,,,,

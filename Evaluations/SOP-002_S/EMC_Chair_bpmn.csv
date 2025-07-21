@@ -1,0 +1,12 @@
+Object Type,Object Name,Corresponding Steps,Predecessor,Successor,Input Data,Input Data Assesment,Output Data,Output Data Assesment,Additional Information
+Start Event,Start EMC Chair Process,,N/A,Receive Proposal for Evaluators and Evaluation Guide,N/A,,N/A,,
+Receive Task,Receive Proposal for Evaluators and Evaluation Guide,1_2.1,Start EMC Chair Process,Endorse Evaluation Guide and Appoint Evaluators,N/A,,Proposal for Evaluators; Evaluation Guide Draft,TP;TP,
+Task,Endorse Evaluation Guide and Appoint Evaluators,1_2.1,Receive Proposal for Evaluators and Evaluation Guide,Send Appointment of Evaluators,Proposal for Evaluators; Evaluation Guide Draft,TP;TP,Endorsed Evaluation Guide; Appointed Evaluators List,TP;TP,
+Send Task,Send Appointment of Evaluators,1_2.1,Endorse Evaluation Guide and Appoint Evaluators,Receive Assessment Results,Endorsed Evaluation Guide; Appointed Evaluators List,TP;TP,N/A,,
+Receive Task,Receive Assessment Results,1_2.4,Send Appointment of Evaluators,Endorse Assessment Outcomes and Determine Suitable Candidates,N/A,,Assessment Results,TP,
+Task,Endorse Assessment Outcomes and Determine Suitable Candidates,1_2.5,Receive Assessment Results,Send Endorsed Suitable Candidates to HUCAP,Assessment Results,TP ,Endorsed Suitable Candidates List,TP,
+Send Task,Send Endorsed Suitable Candidates to HUCAP,1_2.5,Endorse Assessment Outcomes and Determine Suitable Candidates,Receive Proposal for SP/SC Memberships,Endorsed Suitable Candidates List,TP ,N/A,,
+Receive Task,Receive Proposal for SP/SC Memberships,1_3.5,Send Endorsed Suitable Candidates to HUCAP,Endorse Proposal for SP/SC Memberships,N/A,,SP/SC Membership Proposal,TP,
+Task,Endorse Proposal for SP/SC Memberships,1_3.5,Receive Proposal for SP/SC Memberships,Send Endorsed SP/SC Memberships to HUCAP,SP/SC Membership Proposal,TP ,Endorsed SP/SC Memberships,TP,
+Send Task,Send Endorsed SP/SC Memberships to HUCAP,1_3.5,Endorse Proposal for SP/SC Memberships,End EMC Chair Process,Endorsed SP/SC Memberships,TP ,N/A,,
+End Event,End EMC Chair Process,,Send Endorsed SP/SC Memberships to HUCAP,N/A,N/A,,N/A,,

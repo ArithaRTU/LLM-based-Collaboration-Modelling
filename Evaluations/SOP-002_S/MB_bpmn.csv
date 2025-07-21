@@ -1,0 +1,8 @@
+Object Type,Object Name,Corresponding Steps,Predecessor,Successor,Input Data,Input Data Assesment,Output Data,Output Data Assesment,Additional Information
+Start Event,Start appointment process,,N/A,Receive appointment documentation,N/A,,N/A,,
+Receive Task,Receive appointment documentation,1_3.7,Start appointment process,Appoint members,Approved appointment documentation,TP,Received appointment documentation; Acknowledgment of receipt,TP;TP,
+Task,Appoint members,1_4.1,Receive appointment documentation,Establish reserve list,Received appointment documentation,TP,List of appointed members,TP,MB appoints members of SC/SP
+Task,Establish reserve list,1_4.2,Appoint members,Proposal for additional appointment,Draft reserve list; List of appointed members,TP;TP,Final reserve list,TP,MB establishes reserve list
+Gateway (Exclusive),Proposal for additional appointment,1_5.4,Establish reserve list,Receive additional appointment proposal OR End appointment process,,,,,
+Receive Task,Receive additional appointment proposal,1_5.4,Proposal for additional appointment,Appoint members,Additional appointment proposal,TP,Received additional appointment proposal; Acknowledgment of receipt,TP;TP,
+End Event,End appointment process,,Proposal for additional appointment,N/A,N/A,,N/A,,

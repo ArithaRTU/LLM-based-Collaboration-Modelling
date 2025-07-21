@@ -1,0 +1,5 @@
+Object Type,Object Name,Corresponding Steps,Predecessor,Successor,Input Data,Input Data Assessment,Output Data,Output Data Assessment,Additional Information
+Start Event,Start Condition,,N/A,Receive Attendance List,N/A,,N/A,,
+Receive Task,Receive Attendance List,1_3.1,Start Condition,Process Reimbursements,,Attendance List(FN),Attendance List,TP,
+Task,Process Reimbursements,1_3.2,Receive Attendance List,End Condition,Attendance List; Experts’ Compensation Guide,TP;TP;TP,Reimbursement Transactions,TP,Finance Unit reimburses participants in line with Experts’ Compensation Guide
+End Event,End Condition,,Process Reimbursements,N/A,N/A,,N/A,,

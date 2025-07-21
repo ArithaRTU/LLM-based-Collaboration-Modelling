@@ -1,0 +1,4 @@
+Object Type,Object Name,Corresponding Steps,Predecessor,Successor,Input Data,Input Data Assesment,Output Data,Output Data Assesment,Additional Information
+Start Event,Start Condition,,N/A,Share Criteria with Member States,N/A,,N/A,,
+Send Task,Share Criteria with Member States,1_1.6,Start Condition,End Condition,Call requirements document,TP,Shared criteria to MS,TP,
+End Event,End Condition,,Share Criteria with Member States,N/A,N/A,,N/A,,

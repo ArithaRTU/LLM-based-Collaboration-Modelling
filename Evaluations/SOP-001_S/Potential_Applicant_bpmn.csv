@@ -1,0 +1,19 @@
+Object Type,Object Name,Corresonding Steps,Predecessor,Successor,Input Data,Input Data Evaluation,Output Data,Output Data Evaluation,Additional Information
+Start Event,Start Pre-submission Phase,,N/A,Register in Customer Portal,N/A,,N/A,,
+Task,Register in Customer Portal,1_1.1,Start Pre-submission Phase,Request Pre-application ID,Applicant details,TP,Portal credentials,TP,one-time per applicant
+Send Task,Request Pre-application ID,1_1.2,Register in Customer Portal,Receive Pre-application ID,Portal credentials; application details,TP;TP,Pre-application ID,TP,
+Receive Task,Receive Pre-application ID,1_1.2,Request Pre-application ID,Submit GPSA Request,ID request,TP,Pre-application ID,TP,
+Send Task,Submit GPSA Request,1_1.3,Receive Pre-application ID,Receive GPSA Request Outcome,GPSA form; Pre-application ID,TP;TP,GPSA request,TP,
+Receive Task,Receive GPSA Request Outcome,1_1.5,Submit GPSA Request,GPSA Accepted?,GPSA request,TP,Acceptance or rejection notice,TP,within 15 working days
+Gateway (Exclusive),GPSA Accepted?,1_1.5,Receive GPSA Request Outcome,Receive GPSA Advice (Yes) OR Modify and Resubmit (No),Acceptance or rejection notice,TP,–,FP,
+Task,Modify and Resubmit GPSA Request,1_1.6,GPSA Accepted?,Submit GPSA Request,Rejection reasons,TP,Revised GPSA form,TP,loop back if rejected
+Receive Task,Receive GPSA Advice,1_2.2;1_2.3;1_2.4,GPSA Accepted?,Submit RPSA Studies List,Accepted GPSA request,TP,GPSA advice document,TP,
+Send Task,Submit RPSA Studies List,2_1.3,Receive GPSA Advice,Receive Supplementary Info Request,Studies list; Pre-application ID,TP,Studies submission confirmation,TP,per Article 32c
+Receive Task,Receive Supplementary Info Request,2_2.2,Submit RPSA Studies List,Provide Supplementary Info,Studies submission,TP,Request for missing data,FP,within 10 working days
+Task,Provide Supplementary Info,2_2.2,Receive Supplementary Info Request,Launch Public Consultation,Request for missing data,TP,Supplementary data,TP,deadline set by FDP
+Send Task,Launch Public Consultation,2_2.3(FP),Provide Supplementary Info,Receive Public Consultation Closure,Studies list; supplementary data,-,Consultation published,-,within 10 working days after admin clearance
+Receive Task,Receive Public Consultation Closure,2_2.3(FP),Launch Public Consultation,Receive RPSA Advice,Consultation closure notice,-,Third-party comments,-,
+Receive Task,Receive RPSA Advice,2_3.4;2_3.5;2_3.6,Receive Public Consultation Closure,Initiate Notification of Studies,Third-party comments; studies list,TP;FP,RPSA advice document,TP,within 30 working days after consultation
+Send Task,Initiate Notification of Studies,3_1.2,Receive RPSA Advice,Receive NoS Confirmation,Study details; Pre-application ID,TP;FP,NoS submission,TP,per Article 32b
+Receive Task,Receive NoS Confirmation,3_1.2,Initiate Notification of Studies,End Pre-submission Phase,NoS submission,TP,NoS confirmation; notification ID,TP;TP,
+End Event,End Pre-submission Phase,,Receive NoS Confirmation,N/A,N/A,,N/A,,

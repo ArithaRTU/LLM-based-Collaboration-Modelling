@@ -1,0 +1,24 @@
+Message Sent,Sending Task,Sending Participant,Receiving Task,Receiving Participant,Evaluation
+Pre-application ID,Request Pre-application ID,Potential Applicant,Receive Pre-Application ID Request,Front Desk Workforce Planning,TP
+GPSA request,Submit GPSA Request,Potential Applicant,Receive GPSA Request,Front Desk Workforce Planning,TP
+Acceptance Notification,Inform Acceptance,Front Desk Workforce Planning,Receive GPSA Request Outcome,Potential Applicant,TP
+Rejection Notification,Inform Rejection,Front Desk Workforce Planning,Receive GPSA Request Outcome,Potential Applicant,TP
+Written Advice Document,Send Written Advice,Front Desk Workforce Planning,Receive GPSA Advice,Potential Applicant,TP
+Advice Summary,Send Advice Summary,Front Desk Workforce Planning,Receive GPSA advice mode,National Competent Authorities,TP
+GPSA request,Receive GPSA Request,Front Desk Workforce Planning,Receive GPSA request,National Competent Authorities,FP
+Accepted notification,Receive decision on GPSA request,National Competent Authorities,Inform Acceptance,Front Desk Workforce Planning,TP
+Rejected notification,Receive decision on GPSA request,National Competent Authorities,Inform Rejection,Front Desk Workforce Planning,TP
+Studies Data,Submit RPSA Studies List,Potential Applicant,Receive Studies List,Front Desk Workforce Planning,TP
+Studies list,Receive Studies List,Front Desk Workforce Planning,Receive RPSA studies list,National Competent Authorities,FP
+Supplementary Info Request,Request Supplementary Info,Front Desk Workforce Planning,Receive Supplementary Info Request,Potential Applicant,FP
+Consultation Published,Launch Public Consultation,Potential Applicant,Launch Public Consultation,Front Desk Workforce Planning,FP
+Written RPSA Document,Send Written RPSA,Front Desk Workforce Planning,Receive RPSA Advice,Potential Applicant,TP
+RPSA Summary Sent,Send RPSA Summary,Front Desk Workforce Planning,Receive RPSA advice mode,National Competent Authorities,FP
+NoS Submission,Initiate Notification of Studies,Potential Applicant,Receive Study Notification,Front Desk Workforce Planning,TP
+Co-notification Record,Co-notification Submission,Laboratory Testing Facilities,Receive Additional Notification Data,Front Desk Workforce Planning,TP
+Notification Acceptance,Accept Notification,Front Desk Workforce Planning,Receive NoS Confirmation,Potential Applicant,TP
+Comments Received,Receive public consultation comments,National Competent Authorities,Receive comments,Subject Matter Units,TP
+Written Advice,Provide written advice,Subject Matter Units,Send Written RPSA,Front Desk Workforce Planning,TP
+,,,,,
+Missing Send Task,Missing Receive Task,,,,
+None,Receive Public Consultation Closure (Potential Applicant),,,,

@@ -1,0 +1,9 @@
+Object Type,Object Name,Corresponding Steps,Predecessor,Successor,Input Data,Input Data Assesment,Output Data,,Additional Information
+Start Event,Start Condition,,N/A,Receive Call for expressions of interest,N/A,,N/A,,
+Receive Task,Receive Call for expressions of interest,1_1.4,Start Condition,Task Approve Call,N/A,,Call for expressions of interest; Evaluation guide; Communication plan,TP;TP;TP,
+Task,Task Approve Call,1_1.4,Receive Call for expressions of interest,Sufficient candidates?,Call for expressions of interest; Evaluation guide; Communication plan,TP;TP;TP,Approved call for expressions of interest,TP,
+Gateway (Exclusive),Sufficient candidates?,1_1.9,Task Approve Call,Receive Selection Documentation (yes) OR Receive Call for expressions of interest (no),,,,,
+Receive Task,Receive Selection Documentation,1_3.5,Sufficient candidates? (yes),Task Review Selection Documentation,N/A,,Selection procedure report; Draft list of suitable candidates; Multidisciplinary expertise proposal; Draft reserve list,TP;TP;TP;TP,
+Task,Task Review Selection Documentation,1_3.6,Receive Selection Documentation,Send Approved Documentation to MB,Selection procedure report; Draft list of suitable candidates; Multidisciplinary expertise proposal; Draft reserve list,TP;TP;TP;TP,Approved selection documentation,TP,
+Send Task,Send Approved Documentation to MB,1_3.7,Task Review Selection Documentation,End Condition,Approved selection documentation,TP,Selection documentation delivered to MB,TP,
+End Event,End Condition,,Send Approved Documentation to MB,N/A,N/A,,N/A,,

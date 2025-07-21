@@ -1,0 +1,8 @@
+Object Type,Object Name,Corresponding Steps,Predecessor,Successor,Input Data,Input Data Evaluation,Output Data,Onput Data Evaluation,Additional Information
+Start Event,Start Notification,,N/A,Initiate Notification,N/A,,N/A,,
+Receive Task,Initiate Notification,3_1.2,Start Notification,Provide Study Information,N/A,,Draft Notification Details,TP,
+Task,Provide Study Information,3_1.3,Initiate Notification,Co-notification Decision,Draft Notification Details,TP,Completed Study Information,TP,Includes study title and scope
+Gateway (Exclusive),Co-notification Decision,3_1.4,Provide Study Information,Notification Submission OR Co-notification Submission,N/A,,N/A,,
+Send Task,Notification Submission,3_1.3,Co-notification Decision,End Notification,Completed Study Information,TP,Notification Submission Confirmation,TP,
+Send Task,Co-notification Submission,3_1.4,Co-notification Decision,End Notification,Completed Study Information,TP,Co-notification Record,TP,
+End Event,End Notification,,Notification Submission OR Co-notification Submission,N/A,N/A,,N/A,,

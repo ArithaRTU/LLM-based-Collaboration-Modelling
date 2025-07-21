@@ -1,0 +1,5 @@
+Object Type,Object Name,Corresponding Steps,Predecessor,Successor,Input Data,Input Data Assesment,Output Data,Output Data Assesment,Additional Information
+Start Event,Start Condition,,N/A,Receive Publication Date,N/A,,N/A,,
+Receive Task,Receive Publication Date,1_6.3,Start Condition,Plan Communication Activities,,,Publication Date,TP,SO informs CO of the agreed publication date (Step 1.2)
+Task,Plan Communication Activities,1_6.3,Receive Publication Date,End Condition,Publication Date,TP,Communication Plan,TP,"Liaise with SO to plan web story, press release, data visualization, etc. (Step 6.3)"
+End Event,End Condition,,Plan Communication Activities,N/A,N/A,,N/A,,

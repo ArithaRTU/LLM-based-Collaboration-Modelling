@@ -1,0 +1,27 @@
+Object Type,Object Name,Corresponding Steps,Predecessor,Successor,Input Data,Input Data Assesment,Output Data,Output Data Assesment,Additional Information
+Start Event,Start Condition,,N/A,Receive consultation request,N/A,,N/A,,
+Receive Task,Receive consultation request,1_1.0,Start Condition,Discuss proposals,Consultation request message,TP,N/A,Consultation request(FN),
+Task,Discuss proposals,1_1.2,Receive consultation request,Consult DG Sante,Feedback proposals,TP,Plenary minutes; Topics list,TP,
+Send Task,Consult DG Sante,1_1.2,Discuss proposals,Receive DG Sante priorities,Plenary minutes; Topics list,TP;TP,DG Sante response,TP,
+Receive Task,Receive DG Sante priorities,1_1.2,Consult DG Sante,Include topics in yearly work programme,DG Sante response,TP,DG Sante priorities,TP,
+Task,Include topics in yearly work programme,1_1.4,Receive DG Sante priorities,Receive mandate intake,Topics list; DG Sante priorities,TP;TP,Updated work programme,TP,Work programme can be revised as needed
+Receive Task,Receive mandate intake,2_2.0,Include topics in yearly work programme,Decide WG for mandate,Mandate document,TP,Mandate document,TP,
+Task,Decide WG for mandate,2_2.2,Receive mandate intake,Receive draft guidance for adoption,Mandate document,TP,WG decision,TP,
+Receive Task,Receive draft guidance for adoption,2_2.2,Decide WG for mandate,Adopt guidance,Draft guidance,TP,Draft guidance,TP,
+Task,Adopt guidance,2_2.2,Receive draft guidance for adoption,Agree implementation plan,Draft guidance,TP,Adopted guidance,TP,
+Task,Agree implementation plan,3_3.1,Adopt guidance,Publish guidance in EFSA Journal,Adopted guidance,TP,Implementation plan,TP,May consult EC
+Send Task,Publish guidance in EFSA Journal,3_4.1,Agree implementation plan,Upload guidance to repository,Adopted guidance; Implementation plan,TP;TP,Published guidance,TP,
+Send Task,Upload guidance to repository,3_4.2,Publish guidance in EFSA Journal,Monitor guidance implementation,Published guidance,TP,Guidance in repository,TP,
+Task,Monitor guidance implementation,3_5.1,Upload guidance to repository,Collect feedback on guidance,Guidance in repository; Implementation plan,TP;TP,Monitoring report,TP,
+Task,Collect feedback on guidance,3_5.2,Monitor guidance implementation,Compile report for next actions,Monitoring report,TP,Feedback data,TP,
+Task,Compile report for next actions,3_5.3,Collect feedback on guidance,Review guidance for revision,Feedback data,TP,Technical report,TP,
+Task,Review guidance for revision,4_6.1,Compile report for next actions,Decision on review outcome,Technical report,TP,Review outcomes,TP,
+Gateway (Exclusive),Decision on review outcome,4_6.2,Review guidance for revision,Keep guidance OR Archive guidance OR Revise guidance,Review outcomes,FP,,,
+Task,Keep guidance,4_6.4,Decision on review outcome,End Condition,Review outcomes,TP,,Kept guidance report(FN),No further action
+Task,Archive guidance,4_6.4,Decision on review outcome,End Condition,Review outcomes,TP,,Archived guidance report(FN),Inform repository manager and EFSA Journal to archive
+Task,Revise guidance,4_6.3,Decision on review outcome,Prioritise revisions,Review outcomes,TP,,List of Revisions(FN),
+Task,Prioritise revisions,1_1.3,Revise guidance,Record prioritisation in minutes,Review outcomes,TP,Revision priority list,TP,
+Task,Record prioritisation in minutes,FP,Prioritise revisions,End Condition,Revision priority list,TP,Updated meeting minutes,TP,
+End Event,End Condition,,,N/A,N/A,,N/A,,
+,,,,,,,,,
+Missing Steps: 1.1,,,,,,,,,

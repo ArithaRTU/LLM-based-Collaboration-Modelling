@@ -1,0 +1,12 @@
+Object Type,Object Name,Corresponding Steps,Predecessor,Successor,Input Data,Input Data Assesment,Output Data,Output Data Assesment,Additional Information
+Start Event,Mandate Process Initiated,,N/A,Receive Mandate Request,N/A,,N/A,,
+Receive Task,Receive Mandate Request,1_1.0,Mandate Process Initiated,Mandate Source?,Mandate Document,TP,Mandate Request,TP,
+Gateway (Exclusive),Mandate Source?,1_1.0,Receive Mandate Request,Refer to SOP_007 (EC Mandate) OR Draft Self-task Mandate (Internal Mandate),,,,,
+Send Task,Refer to SOP_007,1_2.0,Mandate Source?,Prepare Submission and Recording,Mandate Request,TP,Mandate Document,TP,
+Task,Draft Self-task Mandate,1_2.1,Mandate Source?,Prepare Submission and Recording,Mandate Request,TP,Mandate Document,TP,Use WIN_07_02 for mandate dialogue and scientific workforce planning
+Gateway (Parallel),Prepare Submission and Recording,,Refer to SOP_007 AND Draft Self-task Mandate,Record Mandate in Case Management Tool AND Submit Mandate to SC/SP/SMUs,,,,,
+Task,Record Mandate in Case Management Tool,2_2.0,Prepare Submission and Recording,Submit Mandate to SC/SP/SMUs,Mandate Document,TP,Mandate Recorded,TP,
+Send Task,Submit Mandate to SC/SP/SMUs,2_2.0,Prepare Submission and Recording,Tollgate #2 Passed,Mandate Document,TP,Submitted Mandate,TP,
+Intermediate Event,Tollgate #2 Passed,2_2.4,Submit Mandate to SC/SP/SMUs,Record Tollgate #2 Date,N/A,,N/A,,
+Task,Record Tollgate #2 Date,2_2.5(FP),Tollgate #2 Passed,Mandate Intake Completed,Submitted Mandate,-,Tollgate #2 Date Recorded,-,
+End Event,Mandate Intake Completed,,Record Tollgate #2 Date,N/A,N/A,,N/A,,

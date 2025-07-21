@@ -1,0 +1,34 @@
+Message Sent,Sending Task,Sending Participant,Receiving Task,Receiving Participant,
+Submitted Mandate,Submit Mandate to SC/SP/SMUs,FDP,Receive mandate intake,Scientific Committee,TP
+Submitted Mandate,Submit Mandate to SC/SP/SMUs,FDP,Receive EC mandate,Scientific Panels,TP
+Submitted Mandate,Submit Mandate to SC/SP/SMUs,FDP,Receive Request for Guidance Document Development,Subject Matter Units,TP
+Submitted Mandate,Submit Mandate to SC/SP/SMUs,FDP,Receive Mandate,Working Groups,TP
+Priorities Feedback,Send Priorities to SC,Directorate General for Health and Food Safety,Receive DG Sante priorities,Scientific Committee,TP
+Feedback Requests,Send Consultation Email to Units and Panels,Subject Matter Units,Receive Cross-Cutting Consultation,EFSA Panels and Units,TP
+Draft Document for Consultation,Send Draft for Consultation,Working Groups,Receive Draft Guidance for Consultation,EFSA Panels and Units,TP
+Adoption Request,Send Draft for Adoption to Scientific Committee or Panel,Subject Matter Units,Receive draft guidance for adoption,Scientific Committee,TP
+Adoption Request,Send Draft for Adoption to Scientific Committee or Panel,Subject Matter Units,Receive draft guidance,Scientific Panels,TP
+Final Draft Submitted,Send Final Draft for Adoption,Working Groups,Receive adoption confirmation,EFSA Scientific Officers,TP
+Adopted guidance,Submit for Adoption,EFSA,Publish guidance in EFSA Journal,Scientific Committee,FP
+Revision Request Note,Request Plan Revision,EFSA Management,Receive Review Call,EFSA Panels and Units,TP
+,,,,,
+Missing Message Flows,,,,,
+Missing Send Tasks,Missing Receive Tasks,,,,
+Send Tollgate #3 Report to Case Management Tool(RAL Assistant),None,,,,
+Send Tollgate #2 Report to Case Management Tool(RAL Assistant),None,,,,
+None,Receive Implementation Plan(EFSA Management),,,,
+None,Receive Public Consultation Outcome(EFSA Panels and Units),,,,
+None,Receive Finalized Draft for Adoption(EFSA Panels and Units),,,,
+Communicate Revision Plan(EFSA Panels and Units),None,,,,
+Send Feedback on Implementation Plan (Directorate General for Health and Food Safety),None,,,,
+None,Receive Implementation Plan(Directorate General for Health and Food Safety),,,,
+None,Receive Topic Proposals(Directorate General for Health and Food Safety),,,,
+None,Receive consulation comments(EFSA Scientific Officers),,,,
+Request Plan Revision(EFSA Management),Receive Review Call(EFSA Panels and Units),,,,
+Publish guidance in EFSA Journal(Scientific Committee),None,,,,
+Upload guidance to repository(Scientific Committee),None,,,,
+None,Receive Consultation Comments(Working Groups),,,,
+None,Receive Tollgate #3 Notification(RAL Assistant),,,,
+None,Receive Tollgate #2 Notification(RAL Assistant),,,,
+None,Receive Plenary Minutes(SMU Secretariate),,,,
+Send Archival Request(SMU Secretariate),None,,,,

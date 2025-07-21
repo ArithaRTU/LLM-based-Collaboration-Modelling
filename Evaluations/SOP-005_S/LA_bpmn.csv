@@ -1,0 +1,8 @@
+Object Type,Object Name,Corresponding Steps,Predecessor,Successor,Input Data,Input Data Assesment,Output Data,Output Data Assesement,Additional Information
+Start Event,Meeting Details Available,,N/A,Receive Meeting Details in MOS,N/A,,N/A,,
+Receive Task,Receive Meeting Details in MOS,,Meeting Details Available,Review LOI Draft,RAL Meetings Budget Monitoring Table,,Meeting Details Data,,
+Task,Review LOI Draft,,Receive Meeting Details in MOS,Determine Meeting Type,Meeting Details Data,,LOI Draft,,Legal review of draft invitation
+Gateway (Exclusive),Determine Meeting Type,,Review LOI Draft,Send Physical Meeting LOI OR Send Tele Meeting LOI,,,,,
+Send Task,Send Physical Meeting LOI,,Determine Meeting Type,LOI Sent,LOI Draft,,Physical LOI Sent Confirmation,,Must be sent ≥30 days before meeting (20 days if first WG physical meeting)
+Send Task,Send Tele Meeting LOI,,Determine Meeting Type,LOI Sent,LOI Draft,,Tele LOI Sent Confirmation,,Must be sent ≥8 days before meeting (4 days if first WG tele meeting)
+End Event,LOI Sent,,Send Physical Meeting LOI OR Send Tele Meeting LOI,N/A,N/A,,N/A,,

@@ -1,0 +1,11 @@
+Object Type,Object Name,Corresponding Steps,Predecessor,Successor,Input Data,Input Data Assesment,Output Data,Output Data Assesment,Additional Information
+Start Event,Start Planning Cycle,,N/A,Compile Meetings Plan,N/A,,N/A,,
+Task,Compile Meetings Plan,1_1.1,Start Planning Cycle,Split Update Tasks,RAL Meetings Budget Monitoring Table Template,TP,Compiled Budget Table,TP,At beginning of each quarterly cycle
+Gateway (Parallel),Split Update Tasks,,Compile Meetings Plan,Insert Meeting Details AND Insert Meeting Participants,,,,,
+Task,Insert Meeting Details,1_1.3,Split Update Tasks,Confirm Meeting Details,Compiled Budget Table,TP,Budget Table with Details,TP,"Includes dates, duration, location, nature"
+Task,Insert Meeting Participants,1_1.4,Split Update Tasks,Confirm Meeting Details,Compiled Budget Table,TP,Budget Table with Participants,,Includes participant roles and identities
+Task,Confirm Meeting Details,1_1.7,Insert Meeting Details; Insert Meeting Participants,Receive Draft Minutes,Budget Table with Details; Budget Table with Participants,TP;TP,Confirmed Budget Table,TP,
+Receive Task,Receive Draft Minutes,1_3.3,Confirm Meeting Details,Finalize Approved Minutes,Draft Meeting Minutes,TP,Draft Meeting Minutes,TP,
+Task,Finalize Approved Minutes,1_3.3,Receive Draft Minutes,End Process,Draft Meeting Minutes,TP,Approved Meeting Minutes,TP,Within 15 working days of last day of meeting
+End Event,End Process,,Finalize Approved Minutes,N/A,N/A,,N/A,,
+Missing Steps: 1_1.2,,,,,,,,,

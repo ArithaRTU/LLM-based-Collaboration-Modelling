@@ -1,0 +1,10 @@
+Object Type,Object Name,Corresponding Steps,Predecessor,Successor,Input Data,Input Data Assesment,Output Data,Output Data Assesment,Additional Information
+Start Event,Start Planning Meeting,,N/A,Compile Budget,N/A,,N/A,,
+Task,Compile RAL meetings budget monitoring table,FP(1_1.1),Start Planning Meeting,Share Meeting Plan,N/A,,RAL meetings budget monitoring table,,
+Task,Share planned meeting dates and details,FP(1_1.1),Compile RAL meetings budget monitoring table,Identify and insert participants,RAL meetings budget monitoring table,,Meeting dates plan,,
+Task,Identify and insert meeting participants,FP(1_1.1),Share planned meeting dates and details,WG meeting?,Meeting dates plan,,Meeting participants list,,
+Gateway (Exclusive),WG meeting?,1_1.6,Identify and insert meeting participants,Decide and assign chairperson OR Confirm meeting details,,,,,
+Task,Decide and assign chairperson,1_1.6,WG meeting?,Confirm meeting dates and details,Meeting participants list,TP,Chairperson assignment decision,TP,Only for Working Group meetings
+Task,Confirm meeting dates and details,1_1.6,WG meeting?,Finalise approved minutes,Meeting participants list; Chairperson assignment decision,TP;TP,Confirmed meeting details,TP,
+Task,Finalise approved minutes,1_1.6,Confirm meeting dates and details,End Procedure,Confirmed meeting details,TP,Approved meeting minutes,TP,
+End Event,End Procedure,,Finalise approved minutes,N/A,N/A,,N/A,,

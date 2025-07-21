@@ -1,0 +1,8 @@
+Object Type,Object Name,Corresponding Steps,Predecessor,Successor,Input Data,Input Data Assesment,Output Data,Output Data Assesment,Additional Information
+Start Event,Start of Communication Process,,N/A,Receive Call Inputs,N/A,,N/A,,
+Receive Task,Receive Call Inputs,1_1.1,Start of Communication Process,Prepare Communication Plan,Call Requirements; Assessment Methodology,TP;TP,N/A,Call Inputs(FN),
+Task,Prepare Communication Plan,1_1.3,Receive Call Inputs,Send Communication Plan,Call Requirements; Assessment Methodology,TP;TP,Communication Plan,TP,
+Send Task,Send Communication Plan,1_1.3,Prepare Communication Plan,Implement Communication Plan,Communication Plan,TP,Communication Plan,Sent Communication Plan(FN),
+Task,Implement Communication Plan,1_1.8,Send Communication Plan,Reopen Call?,Communication Plan,TP,Dissemination Results,FP;Call Implementation(FN),
+Gateway (Exclusive),Reopen Call?,1_1.9,Implement Communication Plan,Implement Communication Plan OR End Condition,,,,,
+End Event,End Condition,,Reopen Call?,N/A,N/A,,N/A,,

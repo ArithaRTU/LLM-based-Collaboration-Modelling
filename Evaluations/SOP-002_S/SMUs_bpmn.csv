@@ -1,0 +1,19 @@
+Object Type,Object Name,Corresponding Steps,Predecessor,Successor,Input Data,Input Data Assesment,Output Data,Output Data Assesment,Additional Information
+Start Event,Start Condition,,N/A,Receive call for EoI planning,N/A,,N/A,,
+Receive Task,Receive call for EoI planning,1_1.1,Start Condition,Define call requirements,N/A,Call for EoI planning(FN),Call requirements request,TP,
+Task,Define call requirements,1_1.2,Receive call for EoI planning,Submit requirements inputs,Call requirements request,TP,Requirements and methodology draft,TP,
+Send Task,Submit requirements inputs,1_1.2,Define call requirements,Implement communication plan,Requirements and methodology draft,TP,Inputs for call document; Evaluation guide input,TP;TP,
+Task,Implement communication plan,1_1.8,Submit requirements inputs,Check sufficient candidates?,Communication plan,TP,Communication implemented,TP,
+Gateway (Exclusive),Check sufficient candidates?,1_1.9,Implement communication plan,Propose list of Evaluators (if enough) OR Implement communication plan (if not enough),,,,,Loop back if not enough candidates
+Task,Propose list of Evaluators,1_2.1,Check sufficient candidates?,Receive endorsed assessment outcomes,List of evaluators proposal,TP,Proposal of Evaluators sent,TP,
+Receive Task,Receive endorsed assessment outcomes,1_3.1,Propose list of Evaluators,Analyze and map candidates,Approved evaluator list,TP,Draft list of suitable candidates,TP,
+Task,Analyze and map candidates,1_3.2,Receive endorsed assessment outcomes,Request DoI from candidates,Draft list of suitable candidates,TP,Mapped candidates for DoI request,TP,
+Send Task,Request DoI from candidates,1_3.2,Analyze and map candidates,Receive DoI submissions,Mapped candidates for DoI request,TP,DoI request sent,TP,
+Receive Task,Receive DoI submissions,1_3.2,Request DoI from candidates,Assess and validate DoI,DoI submissions,TP,Validated DoIs,TP,
+Task,Assess and validate DoI,1_3.3,Receive DoI submissions,Propose SP/SC membership shortlist,Validated DoIs,TP,Validated candidate list,TP,
+Send Task,Propose SP/SC membership shortlist,1_3.4,Assess and validate DoI,Check replacement needed?,Validated candidate list,TP,Membership proposal,TP,
+Gateway (Exclusive),Check replacement needed?,1_5.1,Propose SP/SC membership shortlist,Inform HUCAP of replacement need (if yes) OR End Condition (if no),,,,,
+Task,Inform HUCAP of replacement need,1_5.1,Check replacement needed?,Screen reserve list,Membership proposal,TP,Replacement request sent,TP,
+Task,Screen reserve list,1_5.2,Inform HUCAP of replacement need,Check reserve candidates available?,Reserve list,TP,Matched candidates,TP,
+Gateway (Exclusive),Check reserve candidates available?,1_5.3,Screen reserve list,End Condition (if yes) OR Start Condition (if no),,,,,Loop to Start if no reserve candidates available
+End Event,End Condition,,Check reserve candidates available?,N/A,N/A,,N/A,,
